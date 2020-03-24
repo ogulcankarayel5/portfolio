@@ -8,7 +8,7 @@ import {
   Section
 } from "./styledComponents/styles";
 import Container from "@material-ui/core/Container";
-
+//
 const QualificationContainer = styled(FlexContainer)`
   flex-direction: column;
   justify-content: flex-start;

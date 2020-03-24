@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import HomeContent from "../components/HomeContent";
 import About from '../components/About';
 import Qualification from '../components/Qualification';
+import WorkTimeline from '../components/WorkTimeline';
 const HomePage = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const HomePage = () => {
       <HomeContent />
       <About/>
       <Qualification/>
+      <WorkTimeline/>
     </>
   );
 };
