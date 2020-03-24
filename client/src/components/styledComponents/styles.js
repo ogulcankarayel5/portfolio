@@ -19,5 +19,17 @@ export const Paragraph = styled.p`
     color:${props => props.theme.colors.textColor};
 `
 
+export const FlexContainer = styled.div`
+    display:flex;
+
+`
+
+export const Section = styled.section`
+
+    margin-top:10rem;
+`
+
+
+
 
 
