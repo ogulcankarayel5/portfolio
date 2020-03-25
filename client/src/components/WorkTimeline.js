@@ -28,6 +28,7 @@ const WorkTimeline = () => {
         <VerticalTimeline>
           {experiences.map(experience => (
             <VerticalTimelineElement
+            key={experience._id}
               className="vertical-timeline-element--work"
               contentArrowStyle={{
                 borderRight: "7px solid  rgb(33, 150, 243)"

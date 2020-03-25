@@ -4,6 +4,7 @@ import HomeContent from "../components/HomeContent";
 import About from '../components/About';
 import Qualification from '../components/Qualification';
 import WorkTimeline from '../components/WorkTimeline';
+import SkillProgress from '../components/SkillProgress';
 const HomePage = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const HomePage = () => {
       <About/>
       <Qualification/>
       <WorkTimeline/>
+      <SkillProgress/>
     </>
   );
 };
