@@ -5,6 +5,8 @@ import About from '../components/About';
 import Qualification from '../components/Qualification';
 import WorkTimeline from '../components/WorkTimeline';
 import SkillProgress from '../components/SkillProgress';
+import Projects from '../components/Projects';
+import Footer from '../components/Footer';
 const HomePage = () => {
   return (
     <>
@@ -14,6 +16,8 @@ const HomePage = () => {
       <Qualification/>
       <WorkTimeline/>
       <SkillProgress/>
+      <Projects/>
+      <Footer/>
     </>
   );
 };

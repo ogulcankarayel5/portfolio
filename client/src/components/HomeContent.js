@@ -48,11 +48,11 @@ const HomeContent = () => {
     <Grid
       className={(classes.margin, classes.root)}
       container
-      direction="column"
+      direction="row"
       justify="center"
       alignItems="center"
     >
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={4}>
         <Grid container direction="column" justify="center" alignItems="center">
           <Span>Hello I'm</Span>
           <Title className={classes.margin}>{name}</Title>
@@ -102,7 +102,7 @@ const HomeContent = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid className={classes.margin} item xs={4} md={6}>
+      <Grid className={classes.margin} item xs={4} md={4}>
         <img
           className={classes.img}
           src="https://avatars1.githubusercontent.com/u/40337665?s=460&v=4"

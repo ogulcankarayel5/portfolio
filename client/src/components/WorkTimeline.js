@@ -7,18 +7,10 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Container from "@material-ui/core/Container";
-import { Section, Paragraph, SubTitle } from "./styledComponents/styles";
+import { Section, Paragraph, SubTitle,WorkTimelineSection } from "./styledComponents/styles";
 import { MdWork } from "react-icons/md";
 
-const WorkTimelineSection = styled(Section)`
-  & .vertical-timeline-element-content p {
-    font-size: 1.3rem;
-  }
 
-  & .vertical-timeline-element-date {
-    font-size: 1.3rem;
-  }
-`;
 const WorkTimeline = () => {
   const experiences = useSelector(state => state.userReducer.user.experiences);
 

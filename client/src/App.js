@@ -19,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
 
 html{
   font-size:10px;
+  @media (min-width:768px){
+    font-size:11px;
+  }
 }
 
 body{
@@ -49,7 +52,8 @@ const theme = {
     secondary: "#474747",
     titleColor:"#63B4F6",
     subTitleColor:"#484848",
-    whiteText:"#FFFFFF"
+    whiteText:"#FFFFFF",
+    
   }
 };
 

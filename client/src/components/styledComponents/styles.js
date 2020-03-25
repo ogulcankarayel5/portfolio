@@ -29,6 +29,16 @@ export const Section = styled.section`
     margin-top:10rem;
 `
 
+export const WorkTimelineSection = styled(Section)`
+  & .vertical-timeline-element-content p {
+    font-size: 1.3rem;
+  }
+
+  & .vertical-timeline-element-date {
+    font-size: 1.3rem;
+  }
+`;
+
 
 
 
