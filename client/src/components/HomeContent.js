@@ -6,12 +6,12 @@ import Grid from "@material-ui/core/Grid";
 import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
 import { makeStyles } from "@material-ui/core/styles";
 import useWindowDimensions from "../hooks/useWindowDimensions ";
-import { Title, SubTitle, Paragraph } from "./styledComponents/styles";
+import { Title, SubTitle, Paragraph, Section } from "./styledComponents/styles";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    
+    flexGrow: 1
+
     // [theme.breakpoints.up('md')]: {
     //   backgroundColor:"red"
     // },
@@ -21,12 +21,27 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "50%"
   },
   margin: {
-    margin: theme.spacing(4, 0, 0, 0)
+    margin: theme.spacing(4, 0, 0, 0),
+  
   },
   paddingLeft: {
     marginLeft: theme.spacing(1)
   }
 }));
+
+const HomeSection = styled(Section).attrs({
+  id: "home"
+})`
+  margin-top: 0;
+  @media (min-width: 768px) {
+    margin-top: 10rem;
+  }
+  @media (min-width: 992px) {
+    & img {
+      width: 30rem;
+    }
+  }
+`;
 
 const Span = styled.span`
   padding: 1rem 3rem;
@@ -41,74 +56,83 @@ const Span = styled.span`
 const HomeContent = () => {
   const classes = useStyles();
   const user = useSelector(state => state.userReducer.user);
-  
+
   const { name, email, phone } = user;
   const { height, width } = useWindowDimensions();
   return (
-    <Grid
-      className={(classes.margin, classes.root)}
-      container
-      direction="row"
-      justify="center"
-      alignItems="center"
-    >
-      <Grid item xs={12} md={4}>
-        <Grid container direction="column" justify="center" alignItems="center">
-          <Span>Hello I'm</Span>
-          <Title className={classes.margin}>{name}</Title>
-          <SubTitle className={classes.margin}>Computer Engineer</SubTitle>
+    <HomeSection>
+      <Grid
+        className={(classes.margin, classes.root)}
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+        <Grid item xs={12} md={6} lg={6}>
           <Grid
             container
-            className={classes.margin}
+            direction="column"
             justify="center"
             alignItems="center"
           >
-            <FaEnvelope />
-            <Paragraph className={classes.paddingLeft}>{email}</Paragraph>
-          </Grid>
-          <Grid
-            container
-            className={classes.margin}
-            justify="center"
-            alignItems="center"
-          >
-            <FaPhone />
-            <Paragraph className={classes.paddingLeft}>{phone}</Paragraph>
-          </Grid>
-          <Grid
-            container
-            className={classes.margin}
-            justify="center"
-            alignItems="center"
-          >
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://github.com/ogulcankarayel5"
+            <Span>Hello I'm</Span>
+            <Title className={classes.margin}>{name}</Title>
+            <SubTitle className={classes.margin}>Computer Engineer</SubTitle>
+            <Grid
+              container
+              className={classes.margin}
+              justify="center"
+              alignItems="center"
             >
-              <FaGithub size={"2.5rem"} style={{ color: "#484848" }} />
-            </a>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://github.com/ogulcankarayel5"
+              <FaEnvelope />
+              <Paragraph className={classes.paddingLeft}>{email}</Paragraph>
+            </Grid>
+            <Grid
+              container
+              className={classes.margin}
+              justify="center"
+              alignItems="center"
             >
-              <FaLinkedin
-                className={classes.paddingLeft}
-                size={"2.5rem"}
-                style={{ color: "#484848" }}
-              />
-            </a>
+              <FaPhone />
+              <Paragraph className={classes.paddingLeft}>{phone}</Paragraph>
+            </Grid>
+            <Grid
+              container
+              className={classes.margin}
+              justify="center"
+              alignItems="center"
+            >
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/ogulcankarayel5"
+              >
+                <FaGithub size={"2.5rem"} style={{ color: "#484848" }} />
+              </a>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/ogulcankarayel5"
+              >
+                <FaLinkedin
+                  className={classes.paddingLeft}
+                  size={"2.5rem"}
+                  style={{ color: "#484848" }}
+                />
+              </a>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid className={classes.margin} item xs={4} md={6} lg={6}>
+          <Grid container justify="center">
+            <img
+              className={classes.img}
+              src="https://avatars1.githubusercontent.com/u/40337665?s=460&v=4"
+            />
           </Grid>
         </Grid>
       </Grid>
-      <Grid className={classes.margin} item xs={4} md={4}>
-        <img
-          className={classes.img}
-          src="https://avatars1.githubusercontent.com/u/40337665?s=460&v=4"
-        />
-      </Grid>
-    </Grid>
+    </HomeSection>
   );
 };
 

@@ -14,6 +14,9 @@ import {
 } from "./styledComponents/styles";
 import Container from "@material-ui/core/Container";
 
+const ProjectSection = styled(WorkTimelineSection).attrs({
+  id:"projects"
+})``;
 const ProjectFeatures = styled.div`
   display: flex;
 
@@ -42,7 +45,7 @@ const Skills = () => {
   const projects = useSelector(state => state.userReducer.user.projects);
   console.log(projects);
   return (
-    <WorkTimelineSection>
+    <ProjectSection>
       <Container>
         <VerticalTimeline>
           {projects.map(project => (
@@ -67,7 +70,7 @@ const Skills = () => {
           ))}
         </VerticalTimeline>
       </Container>
-    </WorkTimelineSection>
+    </ProjectSection>
   );
 };
 

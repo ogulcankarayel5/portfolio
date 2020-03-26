@@ -24,9 +24,7 @@ const Header = styled.header`
   }
 
   @media (min-width: 768px) {
-    & nav {
-      height: 10rem;
-    }
+    
 
     & ul {
       position: initial;
@@ -46,6 +44,7 @@ const Header = styled.header`
 
 const Nav = styled.nav`
   height: 5rem;
+  
 `;
 
 const MenuToggle = styled.div`
@@ -132,23 +131,29 @@ const Navbar = props => {
           </MenuToggle>
           <NavList>
             <li className="nav-item">
-              <a className="nav-link" href="/#">
+              <a className="nav-link" href="#home">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">
-                Education
+              <a className="nav-link" href="#about">
+                About
+              </a>
+            </li>
+          
+            <li className="nav-item">
+              <a className="nav-link" href="#experiences">
+                Experiences
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">
-                Portfolio
+              <a className="nav-link" href="#skills">
+                Skills
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#">
-                Contact
+              <a className="nav-link" href="#projects">
+                Projects
               </a>
             </li>
           </NavList>

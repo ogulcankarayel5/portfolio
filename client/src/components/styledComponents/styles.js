@@ -12,6 +12,7 @@ export const Title = styled.h1`
 export const SubTitle = styled.h2`
     color:${props => props.theme.colors.subTitleColor};
     font-size:1.5rem;
+    text-align:center;
 `
 
 export const Paragraph = styled.p`
@@ -25,11 +26,18 @@ export const FlexContainer = styled.div`
 `
 
 export const Section = styled.section`
+  
 
-    margin-top:10rem;
+margin-top:10rem;
+
 `
 
-export const WorkTimelineSection = styled(Section)`
+    
+
+
+export const WorkTimelineSection = styled(Section).attrs({
+  id:"experiences"
+})`
   & .vertical-timeline-element-content p {
     font-size: 1.3rem;
   }

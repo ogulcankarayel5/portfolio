@@ -5,12 +5,16 @@ import Container from "@material-ui/core/Container";
 import { Paragraph, SubTitle, Section } from "./styledComponents/styles";
 import svg from "../assets/computer.svg";
 
+
+const AboutSection = styled(Section).attrs({
+  id:"about"
+})``;
 const GridContainer = styled.div`
   display: grid;
 
   grid-template-rows: 1fr 1fr;
 
-  grid-auto-columns: 1fr;
+  grid-template-columns:1fr;
   justify-items: center;
   align-items: center;
 
@@ -18,7 +22,13 @@ const GridContainer = styled.div`
     width: 15rem;
     height: auto;
   }
+
+  @media (min-width:992px){
+    grid-template-rows:auto;
+    grid-template-columns:1fr 1fr;
+  }
 `;
+
 
 const Content = styled.div`
   display: flex;
@@ -43,7 +53,7 @@ const About = () => {
   const about2 = about.slice(102);
 
   return (
-    <Section>
+    <AboutSection>
       <Container>
         <GridContainer>
           <Content>
@@ -56,7 +66,7 @@ const About = () => {
           </Content>
         </GridContainer>
       </Container>
-    </Section>
+    </AboutSection>
   );
 };
 

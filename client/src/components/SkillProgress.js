@@ -4,7 +4,9 @@ import { useSelector } from "react-redux";
 import { Section, SubTitle } from "./styledComponents/styles";
 import Container from "@material-ui/core/Container";
 
-const ProgressSection = styled(Section)`
+const ProgressSection = styled(Section).attrs({
+  id:"skills"
+})`
   display: flex;
   justify-content: center;
   align-items: center;

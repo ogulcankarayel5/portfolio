@@ -19,8 +19,12 @@ const GlobalStyle = createGlobalStyle`
 
 html{
   font-size:10px;
+  scroll-behavior: smooth;
   @media (min-width:768px){
     font-size:11px;
+  }
+  @media (min-width:992px){
+    font-size:13px;
   }
 }
 

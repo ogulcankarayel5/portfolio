@@ -13,6 +13,10 @@ const QualificationContainer = styled(FlexContainer)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  @media (min-width:992px){
+    flex-direction:row;
+  }
 `;
 
 const Card = styled(FlexContainer)`
@@ -25,6 +29,11 @@ const Card = styled(FlexContainer)`
   margin: 0 auto;
   margin-top: 1rem;
   padding: 2rem;
+
+  @media (min-width:992px){
+    width:40%;
+    height:15rem;
+  }
 `;
 
 const QualificationParagraph = styled(Paragraph)`
@@ -35,8 +44,9 @@ const Qualification = () => {
   return (
     <Section>
       <Container>
+      <SubTitle>What I do</SubTitle>
         <QualificationContainer>
-          <SubTitle>What I do</SubTitle>
+          
           <Card>
             <FaCode size={75} color={"#800080"} />
             <SubTitle>Web Development</SubTitle>
